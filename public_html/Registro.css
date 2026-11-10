@@ -1,0 +1,269 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('Img/Fondo.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    width: 100%;
+    min-height: 110px;
+    background: black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    box-shadow: 0px 1px 10px rgb(212,175,98);
+    z-index: 10;
+}
+
+header table {
+    width: 100%;
+    height: 110px;
+    padding: 0 40px;
+}
+
+header td:first-child {
+    text-align: left;
+}
+
+header td:last-child {
+    text-align: right;
+}
+
+header h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    color: rgb(212,175,98);
+}
+
+header a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: rgb(250,245,235);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: rgb(212,175,98);
+}
+
+
+/* FORMULARIO */
+
+main {
+    width: 90%;
+    max-width: 650px;
+
+    margin: 150px auto 50px;
+    padding: 35px;
+
+    background: rgba(20,14,5,0.94);
+
+    border: 1px solid rgb(212,175,98);
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px rgba(212,175,98,0.2);
+}
+
+main h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    color: rgb(212,175,98);
+    text-align: center;
+
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* ETIQUETAS */
+
+form label {
+    display: inline-block;
+    color: rgb(250,245,235);
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* CAMPOS */
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px 5px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 1px solid rgb(212,175,98);
+
+    outline: none;
+
+    color: rgb(250,245,235);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+form input:focus,
+form select:focus {
+    border-bottom: 2px solid rgb(250,245,235);
+}
+
+form input::placeholder {
+    color: rgba(250,245,235,0.5);
+}
+
+form select option {
+    background: #1D1402;
+    color: rgb(250,245,235);
+}
+
+
+/* BOTÓN GUARDAR */
+
+form button {
+    display: block;
+    margin: 35px auto 5px;
+    padding: 13px 40px;
+
+    background: rgb(212,175,98);
+    color: black;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: rgb(250,245,235);
+}
+
+
+/* VENTANA DEL BOLETO */
+
+#boleto {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.75);
+
+    z-index: 1000;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* SOLAMENTE SE MUESTRA CUANDO TIENE LA CLASE mostrar */
+
+#boleto.mostrar {
+    display: flex;
+}
+
+
+/* CONTENIDO DEL BOLETO */
+
+.contenido-boleto {
+    width: 420px;
+    max-width: 100%;
+
+    padding: 30px;
+
+    background: #1D1402;
+
+    border: 2px solid rgb(212,175,98);
+    border-radius: 15px;
+
+    box-shadow: 0 0 25px rgba(212,175,98,0.3);
+
+    color: rgb(250,245,235);
+    text-align: center;
+}
+
+.contenido-boleto h2,
+.contenido-boleto h3 {
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(212,175,98);
+}
+
+.contenido-boleto p {
+    text-align: left;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.contenido-boleto hr {
+    border: 1px solid rgb(212,175,98);
+    margin: 20px 0;
+}
+
+.contenido-boleto button {
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background: rgb(212,175,98);
+    color: black;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenido-boleto button:hover {
+    background: rgb(250,245,235);
+}
+
+
+/* PANTALLAS PEQUEÑAS */
+
+@media (max-width: 600px) {
+
+    header table {
+        padding: 0 12px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 25px 20px;
+        margin-top: 130px;
+    }
+
+}

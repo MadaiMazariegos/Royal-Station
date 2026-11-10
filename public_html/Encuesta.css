@@ -1,0 +1,318 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 140px;
+    font-family: "Montserrat", sans-serif;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("Img/Fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ENCABEZADO */
+
+.header {
+    width: 100%;
+    min-height: 130px;
+
+    background: black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    box-shadow: 0 1px 10px rgb(212,175,98);
+
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(250,245,235);
+
+    text-decoration: none;
+    font-size: 25px;
+
+    padding: 15px 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+    color: rgb(212,175,98);
+    border-bottom: 3px solid rgb(212,175,98);
+}
+
+/* FORMULARIO */
+
+.Contenedor {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 20px auto 50px;
+    padding: 35px 45px;
+
+    background: rgba(20,14,5,0.94);
+
+    border: 1px solid rgb(212,175,98);
+    border-radius: 20px;
+}
+
+.Contenedor h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 36px;
+    font-weight: 600;
+
+    color: rgb(212,175,98);
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+/* PREGUNTAS Y ETIQUETAS */
+
+.Formulario label,
+.Formulario p {
+    color: rgb(250,245,235);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+.Formulario > label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.Formulario p {
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* CAMPOS */
+
+.Formulario input[type="text"],
+.Formulario select,
+.Formulario textarea {
+    width: 100%;
+    padding: 12px;
+
+    background: rgba(0,0,0,0.15);
+
+    border: none;
+    border-bottom: 1px solid rgb(212,175,98);
+
+    color: rgb(250,245,235);
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+
+    outline: none;
+}
+
+.Formulario select option {
+    background: #1D1402;
+    color: white;
+}
+
+.Formulario textarea {
+    border: 1px solid rgb(212,175,98);
+    border-radius: 10px;
+
+    resize: vertical;
+}
+
+.Formulario input:focus,
+.Formulario select:focus,
+.Formulario textarea:focus {
+    border-color: white;
+}
+
+/* RADIO Y CHECKBOX */
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 10px 0;
+}
+
+.opcion label {
+    margin: 0;
+}
+
+.Formulario input[type="radio"],
+.Formulario input[type="checkbox"] {
+    accent-color: rgb(212,175,98);
+    cursor: pointer;
+}
+
+/* BOTÓN ENVIAR */
+
+.Boton {
+    display: block;
+
+    margin: 35px auto 0;
+    padding: 14px 40px;
+
+    background: rgb(212,175,98);
+    color: black;
+
+    border: none;
+    border-radius: 9px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Boton:hover {
+    background: rgb(250,245,235);
+    transform: scale(1.04);
+}
+
+/* ==========================================
+   VENTANA EMERGENTE (MODAL) CENTRADA Y BONITA
+   ========================================== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal[hidden] {
+    display: none !important;
+}
+
+/* CONTENIDO DE LA VENTANA */
+.modal-contenido {
+    background: #1D1402;
+    width: 90%;
+    max-width: 450px;
+    padding: 35px;
+    border: 2px solid rgb(212, 175, 98);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(212, 175, 98, 0.4);
+}
+
+.modal-contenido h2 {
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(212, 175, 98);
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.modal-contenido p {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(250, 245, 235);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+#cerrarModal {
+    display: inline-block;
+    padding: 12px 35px;
+    background: rgb(212, 175, 98);
+    color: black;
+    border: none;
+    border-radius: 9px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cerrarModal:hover {
+    background: rgb(250, 245, 235);
+    transform: scale(1.05);
+}
+
+
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 650px) {
+
+    body {
+        padding-top: 120px;
+    }
+
+    .header {
+        min-height: 110px;
+        padding: 10px;
+    }
+
+    .logo img:first-child {
+        width: 55px;
+    }
+
+    .logo img:last-child {
+        width: 150px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 17px;
+    }
+
+    .Contenedor {
+        padding: 25px 20px;
+    }
+
+    .Contenedor h2 {
+        font-size: 29px;
+    }
+
+    .modal-contenido {
+        padding: 25px;
+    }
+}

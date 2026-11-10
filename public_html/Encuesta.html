@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encuesta - Royal Station</title>
+
+    <link rel="stylesheet" href="Encuesta.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="Img/LogoImg.png" alt="Logo" width="100">
+            <img src="Img/Logo.png" alt="Royal Station" width="300">
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Volver al inicio</a>
+            <a href="Login.html">Iniciar sesión</a>
+        </nav>
+
+    </header>
+
+    <main class="Contenedor">
+
+        <h2>Cuéntanos sobre tu experiencia</h2>
+
+        <form class="Formulario" id="formEncuesta"
+              action="GuardarEncuesta.php" method="POST">
+
+            <label for="nombre">Nombre del pasajero:</label>
+
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Ingrese su nombre" required>
+
+            <label for="calificacion">
+                1. ¿Cómo calificarías tu viaje?
+            </label>
+
+            <select id="calificacion" name="calificacion" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Excelente">Excelente</option>
+                <option value="Bueno">Bueno</option>
+                <option value="Regular">Regular</option>
+                <option value="Malo">Malo</option>
+            </select>
+
+            <p>2. ¿El tren llegó a tiempo?</p>
+
+            <div class="opcion">
+                <input type="radio" id="si" name="puntualidad" value="Si" required>
+                <label for="si">Sí</label>
+            </div>
+
+            <div class="opcion">
+                <input type="radio" id="no" name="puntualidad" value="No">
+                <label for="no">No</label>
+            </div>
+
+            <p>3. ¿Qué aspectos te gustaron del servicio?</p>
+
+            <div class="opcion">
+                <input type="checkbox" id="comodidad" name="aspectos[]" value="Comodidad">
+                <label for="comodidad">Comodidad</label>
+            </div>
+
+            <div class="opcion">
+                <input type="checkbox" id="limpieza" name="aspectos[]" value="Limpieza">
+                <label for="limpieza">Limpieza</label>
+            </div>
+
+            <div class="opcion">
+                <input type="checkbox" id="atencion" name="aspectos[]" value="Atencion">
+                <label for="atencion">Atención del personal</label>
+            </div>
+
+            <div class="opcion">
+                <input type="checkbox" id="precio" name="aspectos[]" value="Precio">
+                <label for="precio">Precio</label>
+            </div>
+
+            <p>4. ¿Cómo fue la atención del personal?</p>
+
+            <div class="opcion">
+                <input type="radio" id="muybuena" name="atencion_personal" value="Muy buena" required>
+                <label for="muybuena">Muy buena</label>
+            </div>
+
+            <div class="opcion">
+                <input type="radio" id="buena" name="atencion_personal" value="Buena">
+                <label for="buena">Buena</label>
+            </div>
+
+            <div class="opcion">
+                <input type="radio" id="regular" name="atencion_personal" value="Regular">
+                <label for="regular">Regular</label>
+            </div>
+
+            <div class="opcion">
+                <input type="radio" id="mala" name="atencion_personal" value="Mala">
+                <label for="mala">Mala</label>
+            </div>
+
+            <label for="recomendacion">
+                5. ¿Recomendarías Royal Station?
+            </label>
+
+            <select id="recomendacion" name="recomendacion" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Definitivamente">Definitivamente</option>
+                <option value="Tal vez">Tal vez</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="comentario">
+                6. ¿Qué aspecto podemos mejorar?
+            </label>
+
+            <textarea id="comentario" name="comentario"
+                      rows="4"
+                      placeholder="Escribe tus comentarios aquí..."></textarea>
+
+            <button type="submit" class="Boton">
+                Enviar
+            </button>
+
+        </form>
+
+    </main>
+
+    <!-- VENTANA DE AGRADECIMIENTO -->
+
+    <div id="ventanaGracias" class="modal" hidden>
+
+        <div class="modal-contenido">
+
+            <h2>✦ ¡Gracias por tu opinión! ✦</h2>
+
+            <p>
+                Tu experiencia es importante para nosotros.
+                En Royal Station trabajamos para ofrecerte
+                siempre el mejor viaje.
+            </p>
+
+            <button type="button" id="cerrarModal">
+                Aceptar
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="Encuesta.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('Img/Fondo.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 140px;
+}
+
+.header{
+    width: 100%;
+    height: 110px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 10px rgb(212, 175, 98);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 10;
+    
+    min-height: 130px;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(250,245,235);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 15px 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: rgb(212,175,98);
+    border-bottom: 3px solid rgb(212,175,98);
+}
+
+/* ENCABEZADO */
+
+.Encabezado {
+    text-align: center;
+    padding: 30px;
+}
+
+.Encabezado h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    color: rgb(212,175,98);
+}
+
+.Encabezado h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+    color: rgb(250,245,235);
+}
+
+.Encabezado p {
+    color: rgb(250,245,235);
+}
+
+.Encabezado a {
+    color: rgb(212,175,98);
+    text-decoration: none;
+}
+
+.Contenedor {
+    width: 95%;
+    max-width: 1050px; /* Ampliamos para que la tabla luzca centrada y cómoda */
+
+    margin: 20px auto 50px;
+    padding: 35px;
+
+    background: rgba(20,14,5,0.94);
+
+    border: 1px solid rgb(212,175,98);
+    border-radius: 20px;
+}
+
+.Contenedor h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    color: rgb(212,175,98);
+    text-align: center;
+}
+
+/* TABLA */
+#SQL {
+    padding: 20px;
+}
+
+.Tabla {
+    max-width: 900px;
+    width: 90%;
+
+    margin: 0 auto;
+
+    background: #1D1402;
+    border: 2px solid rgb(212, 175, 98);
+    border-radius: 20px;
+
+    padding: 30px;
+    text-align: center;
+}
+
+.Info {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: rgb(212, 175, 98);
+}
+
+td {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: rgb(250, 245, 235);
+}
+
+th, td {
+    border: 1px solid rgb(212, 175, 98);
+    padding: 15px 10px;
+}
+
+/* BOTÓN */
+
+.Boton {
+    display: block;
+    margin: 30px auto 0;
+
+    padding: 13px 35px;
+
+    background: rgb(212,175,98);
+    color: black;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Boton:hover {
+    background: rgb(250,245,235);
+}

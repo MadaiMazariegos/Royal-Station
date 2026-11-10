@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="Login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet"> 
+        <title> Royal Station </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <div class="Login">
+            <h1> ROYAL STATION </h1>
+            <form onsubmit="InicioSesion (); return false;">
+                <label for="TxtUsuario"> Usuario: </label>
+                <br>
+                <input type="text" id="TxtUsuario" name="Usuario" placeholder="Ingrese su usuario">
+                <br><br>
+
+                <label for="TxtContra"> Contraseña: </label>
+                <br>
+                <input type="password" id="TxtContra" name="Contra" placeholder="Ingrese su contraseña">
+                <br><br>
+
+                <button type="submit"> Iniciar sesión </button>
+
+            </form>
+        </div>
+        <script src="Login.js"></script>
+    </body>
+</html>

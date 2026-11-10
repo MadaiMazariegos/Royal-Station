@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Registro.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <title>Registro de pasajeros</title>
+</head>
+
+<body>
+
+    <header>
+        <table>
+            <tr>
+                <td><h1>Registro de pasajeros</h1></td>
+                <td><a href="index.html">Volver al inicio</a></td>
+            </tr>
+        </table>
+    </header>
+
+    <main>
+        <h2>Datos del pasajero</h2>
+
+        <form id="registroForm">
+
+            <label for="TxtNom">Nombre completo:</label>
+            <br>
+            <input type="text" id="TxtNom" name="nombre" placeholder="Ingrese su nombre" required>
+            <br><br>
+
+            <label for="TxtDpi">DPI:</label>
+            <br>
+            <input type="text" id="TxtDpi" name="dpi" placeholder="Ingrese su DPI" required>
+            <br><br>
+
+            <label for="TxtCorreo">Correo electrónico:</label>
+            <br>
+            <input type="email" id="TxtCorreo" name="correo" placeholder="Ingrese su correo" required>
+            <br><br>
+
+            <label for="TxtTel">Teléfono:</label>
+            <br>
+            <input type="tel" id="TxtTel" name="telefono" placeholder="Ingrese su teléfono" required>
+            <br><br>
+
+            <label for="destino">Destino:</label>
+            <br>
+            <select id="destino" name="destino" required>
+                <option value="">Seleccione un destino</option>
+                <option value="89">Londres - París</option>
+                <option value="69">Londres - Bruselas</option>
+                <option value="115">Londres - Ámsterdam</option>
+            </select>
+            <br><br>
+
+            <label for="Fecha">Fecha del viaje:</label>
+            <br>
+            <input type="date" id="Fecha" name="fecha" required>
+            <br><br>
+
+            <label for="Horario">Horario:</label>
+            <br>
+            <select id="Horario" name="horario" required>
+                <option value="">Seleccione un horario</option>
+                <option value="08:00">08:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+            </select>
+            <br><br>
+
+            <label for="cantidad">Cantidad de boletos:</label>
+            <br>
+            <input type="number" id="cantidad" min="1" value="1" required>
+            <br><br>
+
+            <button type="submit">Guardar</button>
+
+        </form>
+    </main>
+
+    <!-- VENTANA DEL BOLETO -->
+    <div id="boleto">
+
+        <div class="contenido-boleto">
+
+            <h2>ROYAL STATION</h2>
+            <h3>BOLETO DIGITAL</h3>
+
+            <hr>
+
+            <p id="datoNombre"></p>
+            <p id="datoDpi"></p>
+            <p id="datoCorreo"></p>
+            <p id="datoTelefono"></p>
+            <p id="datoDestino"></p>
+            <p id="datoFecha"></p>
+            <p id="datoHorario"></p>
+            <p id="datoCantidad"></p>
+
+            <h2 id="total"></h2>
+
+            <button type="button" onclick="cerrarBoleto()">
+                Cerrar boleto
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="Registro.js"></script>
+
+</body>
+</html>
