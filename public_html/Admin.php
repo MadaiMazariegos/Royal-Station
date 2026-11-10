@@ -1,9 +1,9 @@
 <?php
 // 1. CONEXIÓN A LA BASE DE DATOS CON TU CONTRASEÑA
-$servidor = "localhost";
-$usuario = "root";
-$password = "Ny-mos;)";
-$baseDatos = "Royal_Station";
+$servidor = "sql212.infinityfree.com"; 
+$usuario = "if0_43399383";           
+$password = "Ny-mos;)"; 
+$baseDatos = "if0_43399383_Royal_Station"; 
 
 $conexion = new mysqli($servidor, $usuario, $password, $baseDatos);
 

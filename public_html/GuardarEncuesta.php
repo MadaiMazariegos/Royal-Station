@@ -3,10 +3,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$servidor = "localhost";
-$usuario = "root";
-$password = "Ny-mos;)";
-$baseDatos = "Royal_Station";
+$servidor = "sql212.infinityfree.com"; 
+$usuario = "if0_43399383";           
+$password = "Ny-mos;)"; 
+$baseDatos = "if0_43399383_Royal_Station"; 
 
 $conexion = new mysqli($servidor, $usuario, $password, $baseDatos);
 
